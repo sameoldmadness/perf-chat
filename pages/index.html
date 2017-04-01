@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="preload" href="/css/style.css" as="style"> -->
+    <!-- <link rel="preload" href="/js/main.js" as="script"> -->
+
+    <title>Perf Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css" media="none">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      main {
+        font-family: sans-serif;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        background: white;
+        font-size: 16px;
+      }
+      section {
+        padding: 1em 10px;
+        box-sizing: border-box;
+        height: calc(100% - 50px);
+        overflow-y: scroll;
+        /* inertial scroll for mobile phones */
+        -webkit-overflow-scrolling: touch;
+      }
+      article {
+        margin: 1em 0 0 40px;
+        position: relative;
+        padding-left: 10px;
+      }
+      address {
+        display: inline;
+        font-weight: bold;
+        font-style: normal;
+      }
+      time {
+        opacity: .3;
+        margin-left: .2em;
+      }
+      p {
+        line-height: 1.3;
+        margin: .3em 0 0;
+      }
+      article img {
+        position: absolute;
+        left: -40px;
+        top: 0;
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+      .dummy {
+        opacity: .3;
+      }
+      .dummy p {
+        height: 15px;
+        background: red;
+        width: 150px;
+      }
+      .dummy header {
+        background: blue;
+        width: 100px;
+      }
+      .dummy img {
+        background: green;
+      }
+      footer {
+        display: none;
+      }
+    </style>
+</head>
+<body>
+
+<main>
+  <section>
+    <article class="dummy">
+      <header>
+        <address></address>
+        <time></time>
+        <img></img>
+      </header>
+      <p></p>
+    </article>
+    <article class="dummy">
+      <header>
+        <address></address>
+        <time></time>
+        <img></img>
+      </header>
+      <p></p>
+    </article>
+    <article class="dummy">
+      <header>
+        <address></address>
+        <time></time>
+        <img></img>
+      </header>
+      <p></p>
+    </article>
+    <article class="dummy">
+      <header>
+        <address></address>
+        <time></time>
+        <img></img>
+      </header>
+      <p></p>
+    </article>
+    <article class="dummy">
+      <header>
+        <address></address>
+        <time></time>
+        <img></img>
+      </header>
+      <p></p>
+    </article>
+  </section>
+  <footer>
+    <menu hidden>
+    </menu>
+    <form>
+      <button type="button">😶</button>
+      <input>
+      <button type="submit">Send</button>
+    </form>
+  </footer>
+</main>
+    
+<script>document.querySelector('link').removeAttribute('media')</script>
+<script src="/js/index.js"></script>
+
+</body>
+</html>

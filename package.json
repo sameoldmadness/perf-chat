@@ -1,0 +1,25 @@
+{
+  "name": "perf-chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
+    "he": "^1.1.1",
+    "lodash": "^4.17.4",
+    "lodash-es": "^4.17.4",
+    "mime": "^1.3.4",
+    "spdy": "^3.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "scripts": {
+    "build": "rollup --config"
+  }
+}
