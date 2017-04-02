@@ -6,22 +6,17 @@ const section = document.querySelector('section');
 const emojiButton = document.querySelector('button[type="button"]');
 const emojiMenu = document.querySelector('menu');
 
-const emojiList = [
-  '😀', '😃', '😄', '😁', '😆', '😅', '😂', 
-  '🤣', '😡', '😊', '😇', '🙂', '🙃', '😉', 
-  '😌', '😍', '😘', '😗', '😙', '😚', '😋'];
-
 function createArticle({ user, time, text }) {
   const article = document.createElement('article');
 
-  const image1x = `/img/users/1x/${htmlEscape(user.image)}`;
-  const image2x = `/img/users/2x/${htmlEscape(user.image)}`;
+  const image = `/img/users/${htmlEscape(user.image)}`;
+  const img = `<img src="${image}"></img>`;
   
   article.innerHTML = `
     <header>
       <address>${htmlEscape(user.name)}</address>
       <time>${htmlEscape(time)}</time>
-      <image src="${image1x}" srcset="${image2x} 2x"></image>
+      ${img}
     </header>
     <p>${htmlEscape(text)}</p>
   `;
@@ -31,10 +26,15 @@ function createArticle({ user, time, text }) {
 
 emojiButton.addEventListener('click', async _ => {
   if (emojiMenu.getAttribute('hidden') !== null) {
+    const emojiResponse = await fetch('/api/emoji');
+    const emojiList = (await emojiResponse.json()).map(emoji => {
+      return `<img src="/img/emoji/${htmlEscape(emoji)}">`;
+    });
+
     for (const emoji of emojiList) {
       const menuitem = document.createElement('menuitem');
 
-      menuitem.textContent = emoji;
+      menuitem.innerHTML = emoji;
       emojiMenu.appendChild(menuitem);
     }
 

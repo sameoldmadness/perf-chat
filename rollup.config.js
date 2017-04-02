@@ -4,5 +4,6 @@ export default {
   entry: 'client/src/index.js',
   format: 'iife',
   plugins: [resolve()],
-  dest: 'client/dist/js/index.js'
+  dest: 'client/dist/js/index.js',
+  treeshake: false,
 };

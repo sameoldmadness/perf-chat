@@ -1,5 +1,3 @@
-import padStart from 'lodash-es/padStart';
-
 const htmlEntitiesMap = { '<': 'lt', '>': 'gt', '"': 'quot' };
 const htmlEntities = Object.keys(htmlEntitiesMap);
 const htmlRegexp = new RegExp('[' + htmlEntities.join('') + ']', 'g');
@@ -12,8 +10,8 @@ export function formatTime(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
 
-  hours = padStart(hours, 2, 0);
-  minutes = padStart(minutes, 2, 0);
+  hours = _.padStart(hours, 2, 0);
+  minutes = _.padStart(minutes, 2, 0);
   
   return `${hours}:${minutes}`;
 }
