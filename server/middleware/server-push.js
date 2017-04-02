@@ -25,7 +25,7 @@ module.exports = page => {
         const resources = extractResources(pageFileName);
 
         resources.forEach(resource => {
-            const fileName = join(__dirname, `../static/${resource.path}`);
+            const fileName = join(__dirname, `../../client/dist/${resource.path}`);
             const stream = res.push(resource.path, {
                 status: 200,
                 method: 'GET',

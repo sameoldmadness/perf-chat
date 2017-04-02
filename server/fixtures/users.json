@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Роман Парадеев",
+    "login": "grumpy",
+    "image": "grumpy.jpg"
+  },
+  {
+    "name": "Сергей Гоголев",
+    "login": "gogoleff",
+    "image": "gogoleff.jpg"
+  },
+  {
+    "name": "Евгений Мокеев",
+    "login": "mokeev",
+    "image": "mokeev.jpg"
+  },
+  {
+    "name": "Олег Мохов",
+    "login": "mokhov",
+    "image": "mokhov.jpg"
+  }
+]

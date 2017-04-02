@@ -1,9 +1,8 @@
 import resolve from 'rollup-plugin-node-resolve';
 
 export default {
-  entry: 'src/index.js',
+  entry: 'client/src/index.js',
   format: 'iife',
   plugins: [resolve()],
-  dest: 'static/js/index.js',
-  // treeshake: false,
+  dest: 'client/dist/js/index.js'
 };
